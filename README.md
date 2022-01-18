@@ -12,7 +12,7 @@ Create a new directory
 
 Clone this repo
 
-    git clone https://github.com/mrjeoffrey/dayplanner.git
+    git clone https://github.com/mrjeoffrey/day-planner.git
 
 Open folder in VisualStudioCode and modify `index.html`
 
@@ -23,8 +23,8 @@ Open folder in VisualStudioCode and modify `index.html`
 ## LIVE
 | DEPLOYMENT | URL | STATUS |
 | ---------- | --- | ------ |
-| Repository  | [github.com/mrjeoffrey/dayplanner](https://github.com/mrjeoffrey/dayplanner) |  ACTIVE 🟢   |
-| Published Page     | [mrjeoffrey.github.io/dayplanner](https://mrjeoffrey.github.io/dayplanner/) | ACTIVE 🟢  |
+| Repository  | [github.com/mrjeoffrey/dayplanner](https://github.com/mrjeoffrey/day-planner) |  ACTIVE 🟢   |
+| Published Page     | [mrjeoffrey.github.io/dayplanner](https://mrjeoffrey.github.io/day-planner/) | ACTIVE 🟢  |
 
 ## Credits
 
