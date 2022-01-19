@@ -1,5 +1,5 @@
 # dayplanner
-A versatile dayplanner for developers. Keep your life organized day by day.
+A versatile dayplanner application for users to save events each hour of the day. Keep your life organized day by day. Powered by jQuery
 
 ## Install
 To use this dayplanner as a template, open `terminal` or `gitbash` and move to Desktop
