@@ -12,8 +12,26 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 
-// create save function
-// save in local storage
+
+
+// save schedule function
+$(".saveBtn").on("click", function(){
+    var time = $(this).parent().attr("id");
+    var value = $(this).siblings(".description").val();
+    // save in local storage
+    localStorage.setItem(time, value);
+});
+
+// get stored schedule
+var keys = Object.keys(localStorage);
+    // loop for local storage keys
+    for (var i = 0; i < keys.length; i++) {
+        // assign storage index
+        var value = localStorage.getItem(keys[i]);
+        // add value to textarea
+        var task = $("#" + keys[i]).find("textarea");
+        task.val(value);
+    }
 
 // create timeblock function loop
     // identify timeblock
