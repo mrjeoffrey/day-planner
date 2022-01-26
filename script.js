@@ -42,10 +42,18 @@ $(document).ready(function() {
         // grab current hour from momentjs
         var currentHour = moment().hours();
             console.log(currentHour);
-    }
-        // identify timeblock
-        // identify hour
-        // with current day, organize blocks into proper time frames
+        
+        // loop through each timeblock 
+        $("time-block").each(function() {
+            // identify timeblock
+            // identify hour
+            // with current day, organize blocks into proper time frames (past, current, future)
+        })
+    
+            
+    
+        }
+
     
 timeBlock();
     
