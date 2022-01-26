@@ -18,7 +18,7 @@ Open folder in VisualStudioCode and modify `index.html`
 
 ## Usage
 
-![dayplanner desktop version 1.0](assets/screenshots/dayplanner-desktop-v1.png)
+![dayplanner desktop version 1.0](reqs/Assets/dayplanner.gif)
 
 ## LIVE
 | DEPLOYMENT | URL | STATUS |
@@ -27,12 +27,6 @@ Open folder in VisualStudioCode and modify `index.html`
 | Published Page     | [mrjeoffrey.github.io/dayplanner](https://mrjeoffrey.github.io/day-planner/) | ACTIVE 🟢  |
 
 ## Credits
-
-| Contributors | Role |
-| ----- | ---- |
-| [Marcus Lewis](https://github.com/lewisemarcus) | TBA |
-| [Tyler Welker](https://github.com/twelk) | TBA |
-| [Jason Yoo](https://github.com/jasonjayoo) | TBA |
 
 | Resources | Descriptions |
 | --------- | ------------ |
