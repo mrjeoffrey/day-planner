@@ -41,21 +41,37 @@ $(document).ready(function() {
     function timeBlock() {
         // grab current hour from momentjs
         var currentHour = moment().hours();
-            console.log(currentHour);
+        console.log(typeof currentHour);
         
         // loop through each timeblock 
         $("time-block").each(function() {
-            // identify timeblock
-            // identify hour
-            // with current day, organize blocks into proper time frames (past, current, future)
-        })
-    
+            // access id of time-block
+            var hourRow = $(this).attr("id");
+            // use substring method to grab everything after "hour-##"
+            var hourTime = hourRow.substring(5, hourRow.length);
+            // change the typeof from string to integer to compare with currentHour
+            var intHourTime = parseInt(hourTime);
             
-    
-        }
+            // with current day, organize blocks into proper time frames (past, current, future)
+            if (intHourTime < currentHour) {
+                $(this).addClass("past");
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+            }
+            else if (intHourTime > currentHour) {
+                $(this).addClass("future");
+                $(this).removeClass("present");
+                $(this).removeClass("past");
+            }
+            else if (intHourTime === currentHour) {
+                $(this).addClass("present");
+                $(this).removeClass("future");
+                $(this).removeClass("past");
+            }
+            
+        });
 
+    }
+    timeBlock();
     
-timeBlock();
-    
-
 });
