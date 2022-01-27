@@ -1,16 +1,3 @@
-// GIVEN I am using a daily planner to create a schedule
-// WHEN I open the planner
-// THEN the current day is displayed at the top of the calendar
-// WHEN I scroll down
-// THEN I am presented with timeblocks for standard business hours
-// WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-// WHEN I click into a timeblock
-// THEN I can enter an event
-// WHEN I click the save button for that timeblock
-// THEN the text for that event is saved in local storage
-// WHEN I refresh the page
-// THEN the saved events persist
 
 // jQuery must-have. tells browser to use this code once DOM loaded
 $(document).ready(function() { 
@@ -41,29 +28,37 @@ $(document).ready(function() {
     function timeBlock() {
         // grab current hour from momentjs
         var currentHour = moment().hours();
-        console.log(typeof currentHour);
         
         // loop through each timeblock 
-        $("time-block").each(function() {
+        $(".time-block").each(function() {
             // access id of time-block
             var hourRow = $(this).attr("id");
             // use substring method to grab everything after "hour-##"
             var hourTime = hourRow.substring(5, hourRow.length);
             // change the typeof from string to integer to compare with currentHour
             var intHourTime = parseInt(hourTime);
+            // function not working, so parseInt-ing currentHour
+            var intCurrentHour = parseInt(currentHour);
             
-            // with current day, organize blocks into proper time frames (past, current, future)
-            if (intHourTime < currentHour) {
+            // with current day, organize blocks into proper time frames (past, current, future). Update - parseInt the variables once again.
+            
+            // conditions for past
+            
+            if (parseInt(intHourTime) < parseInt(intCurrentHour)) {
                 $(this).addClass("past");
                 $(this).removeClass("future");
                 $(this).removeClass("present");
             }
-            else if (intHourTime > currentHour) {
+
+            // conditions for future
+            else if (parseInt(intHourTime) > parseInt(intCurrentHour)) {
                 $(this).addClass("future");
                 $(this).removeClass("present");
                 $(this).removeClass("past");
             }
-            else if (intHourTime === currentHour) {
+
+            // conditions for present
+            else if (parseInt(intHourTime) === parseInt(intCurrentHour)) {
                 $(this).addClass("present");
                 $(this).removeClass("future");
                 $(this).removeClass("past");
