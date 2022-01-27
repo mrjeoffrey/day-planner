@@ -1,4 +1,3 @@
-
 // jQuery must-have. tells browser to use this code once DOM loaded
 $(document).ready(function() { 
 
@@ -43,20 +42,17 @@ $(document).ready(function() {
             // with current day, organize blocks into proper time frames (past, current, future). Update - parseInt the variables once again.
             
             // conditions for past
-            
             if (parseInt(intHourTime) < parseInt(intCurrentHour)) {
                 $(this).addClass("past");
                 $(this).removeClass("future");
                 $(this).removeClass("present");
             }
-
             // conditions for future
             else if (parseInt(intHourTime) > parseInt(intCurrentHour)) {
                 $(this).addClass("future");
                 $(this).removeClass("present");
                 $(this).removeClass("past");
             }
-
             // conditions for present
             else if (parseInt(intHourTime) === parseInt(intCurrentHour)) {
                 $(this).addClass("present");
@@ -67,6 +63,7 @@ $(document).ready(function() {
         });
 
     }
+    // execute timeBlock function to go through each row in html
     timeBlock();
     
 });
